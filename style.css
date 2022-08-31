@@ -1,0 +1,873 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/* ------------------------------------------------------- */
+/* ---------------------Home------------------------ */
+/* ------------------------------------------------------- */
+.container{
+    width: 100%;
+    height: 100vh;
+    background: url(starter-code/assets/home/background-home-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    position: relative;
+    opacity: 0;
+}
+.bar{
+    display: none;
+}
+.close{
+    display: none;
+}
+.logo{
+    width: 10%;
+    text-align: center;
+}
+.middle{
+    width: 30%;
+    border: 0.05rem solid #fff;
+    margin-left: 2rem;
+    z-index: 2;
+    position: absolute;
+    right: 58%;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 60%;
+    justify-content: center;
+    backdrop-filter: blur(12px) saturate(200%);
+    -webkit-backdrop-filter: blur(12px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.27);
+    /* border-radius: 12px; */
+    /* border: 1px solid rgba(209, 213, 219, 0.3); */
+}
+nav ul li{
+    padding: 2rem 1rem;
+    position: relative;
+    margin: 0 1rem;
+}
+.active::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0.8rem;
+    z-index: 1;
+    width: 80%;
+    height: 0.2rem;
+    background: #fff;
+}
+nav ul li a{
+    text-decoration: none;
+    /* font-weight: 400; */
+    font-size: 0.8rem;
+    color: #fff;
+    font-family: sans-serif;
+    letter-spacing: 0.2rem;
+}
+nav ul li a span{
+    font-weight: 600;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10rem;
+}
+.header-left{
+    width: 60%;
+    padding: 2rem;
+    color: #fff;
+}
+.header-left h3{
+    font-family: sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.5rem;
+    color: rgba(255, 255, 255, 0.759);
+    opacity: 0;
+}
+.header-left h1{
+    font-size: 10rem;
+    line-height: 12rem;
+    opacity: 0;
+}
+.header-left p{
+    font-weight: 100;
+    letter-spacing: 0.2rem;
+    line-height: 2rem;
+    text-align: justify;
+    font-family: sans-serif;
+    color: rgba(255, 255, 255, 0.759);
+    opacity: 0;
+}
+.header-right{
+    width: 20%;
+    opacity: 0;
+}
+.round-box{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background: #fff;
+    display: grid;
+    place-items: center;
+    font-weight: 100;
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------- */
+/* ---------------------Destination------------------------ */
+/* ------------------------------------------------------- */
+
+
+.container2{
+    width: 100%;
+    height: 100vh;
+    background: url(starter-code/assets/destination/background-destination-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+#destination{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    opacity: 0;
+}
+#destination h2{
+    font-weight: 100;
+    font-family: sans-serif;
+    letter-spacing: 0.5rem;
+    color: #fff;
+    line-height: 2rem;
+}
+#destination h2 span{
+    color: rgba(255, 255, 255, 0.482);
+}
+.destination-main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.destination-left{
+    width: 50%;
+    padding: 2rem;
+    overflow: hidden;
+}
+.destination-slider{
+    width: 25rem;
+    height: 25rem;
+}
+.destination-slider img{
+    width: 100%;
+    height: 100%;
+}
+.image-box{
+    width: 25rem;
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+}
+#slider{
+    display: flex;
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+}
+.destination-right{
+    width: 40%;
+}
+.slider-nav{
+    width: 80%;
+}
+.slider-nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    list-style: none;
+}
+.slider-nav ul li{
+    padding: 1.5rem 1rem;
+    font-family: sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.2rem;
+    color: #fff;
+    font-size: 1rem;
+    position: relative;
+    cursor: pointer;
+}
+.data-main{
+    width: 25rem;
+    height: 25rem;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
+
+#slider2{
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    box-sizing: border-box;
+    left: -75rem;
+    top: 0;
+    transition: 0.5s;
+}
+.planets-decs{
+    width: 25rem;
+    height: 25rem;
+}
+.planets-decs h1{
+    font-size: 6rem;
+    line-height: 10rem;
+    font-weight: 100;
+    color: #fff;
+    overflow: hidden;
+}
+.planets-decs p{
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.2rem;
+    margin-bottom: 2rem;
+    font-size: 0.8rem;
+}
+.bottom{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.bottom-left{
+    width: 50%;
+}
+.bottom h3{
+    color: #fff;
+    font-weight: 100;
+    font-size: 2rem;
+}
+.bottom p{
+    margin-bottom: 1rem;
+}
+
+
+
+/* ------------------------------------------------------- */
+/* ---------------------------Crew------------------------ */
+/* ------------------------------------------------------- */
+
+
+
+
+.container3{
+    width: 100%;
+    /* height: 100vh; */
+    background: url(starter-code/assets/crew/background-crew-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+
+
+#crew{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    opacity: 0;
+}
+#crew h2{
+    font-weight: 100;
+    font-family: sans-serif;
+    letter-spacing: 0.5rem;
+    color: #fff;
+    line-height: 2rem;
+}
+#crew h2 span{
+    color: rgba(255, 255, 255, 0.482);
+}
+.crew-main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;   
+}
+.crew-left{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.crew-slide-box{
+    width: 35rem;
+    height: 20rem;
+    overflow: hidden;
+    position: relative;
+}
+#slider3{
+    display: flex;
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+}
+.crew-decs{
+    width: 35rem;
+    height: 20rem;
+    overflow: hidden;
+}
+.crew-decs h2{
+    font-size: 1.8rem;
+    letter-spacing: 0;
+}
+.crew-decs h1{
+    font-size: 3rem;
+    line-height: 7rem;
+    color: #fff;
+    font-weight: 100;
+}
+.crew-decs p{
+    width: 80%;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.2rem;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+}
+.crew-data-main{
+    /* overflow: hidden; */
+    display: flex;
+    position: relative;
+}
+
+.crew-buttons{
+    width: 100%;
+    display: flex;
+}
+.crew-btn{
+    width: 1rem;
+    height: 1rem;
+    margin: 1rem;
+    border-radius: 50%;
+    border: 0.1rem solid #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.active-crew{
+    background: #fff;
+}
+
+
+.crew-right{
+    width: 40%;
+}
+.crew-image-box{
+    width: 30rem;
+    height: 30rem;
+    overflow: hidden;
+    position: relative;
+}
+#slider4{
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    box-sizing: border-box;
+    left: -90rem;
+    top: 0;
+    transition: 0.5s;
+}
+.crew-image-slider{
+    width: 30rem;
+    height: 30rem;
+    overflow: hidden;
+}
+.crew-image-slider img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+/* ------------------------------------------------------- */
+/* ---------------------------Crew------------------------ */
+/* ------------------------------------------------------- */
+
+
+
+
+.container4{
+    width: 100%;
+    /* height: 100vh; */
+    background: url(starter-code/assets/technology/background-technology-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+
+
+#technology{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    opacity: 0;
+}
+#technology h2{
+    font-weight: 100;
+    font-family: sans-serif;
+    letter-spacing: 0.5rem;
+    color: #fff;
+    line-height: 2rem;
+}
+#technology h2 span{
+    color: rgba(255, 255, 255, 0.482);
+}
+.technology-main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;   
+}
+.technology-left{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+}
+.technology-buttons{
+    display: flex;
+    flex-direction: column;
+}
+.technology-btn{
+    padding: 0.8rem 1.5rem;
+    font-size: 2rem;
+    border: 0.1rem solid #666;
+    border-radius: 50%;
+    margin: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.5s;
+}
+.active-technology{
+    background: #fff;
+    color: #000;
+}
+.technology-slide-box{
+    width: 30rem;
+    height: 20rem;
+    overflow: hidden;
+    position: relative;
+    margin: 0 2rem;
+    margin-top: 1rem;
+}
+.technology-data-main{
+    /* overflow: hidden; */
+    display: flex;
+    position: relative;
+}
+#slider5{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+}
+.technology-decs{
+    width: 30rem;
+    height: 20rem;
+    overflow: hidden;
+}
+.technology-decs p{
+    width: 100%;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.2rem;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+}
+.technology-decs h1{
+    font-size: 3rem;
+    line-height: 4rem;
+    color: #fff;
+    font-weight: 100;
+}
+.technology-right{
+    width: 40%;
+    margin-bottom: 2rem;
+}
+.technology-image-box{
+    width: 25rem;
+    height: 30rem;
+    overflow: hidden;
+    position: relative;
+}
+#slider6{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+}
+.technology-image-slider1{
+    width: 25rem;
+    height: 30rem;
+    overflow: hidden;
+    background: url(starter-code/assets/technology/image-launch-vehicle-portrait.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.technology-image-slider2{
+    width: 25rem;
+    height: 30rem;
+    overflow: hidden;
+    background: url(starter-code/assets/technology/image-spaceport-portrait.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.technology-image-slider3{
+    width: 25rem;
+    height: 30rem;
+    overflow: hidden;
+    background: url(starter-code/assets/technology/image-space-capsule-portrait.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+/* Media Queries */
+
+
+/* @media(max-width: 2992px){
+    html{
+        font-size: 150%;
+    }
+}
+@media(max-width: 1780px){
+    html{
+        font-size: 125%;
+    }
+}
+@media(max-width: 1490px){
+    html{
+        font-size: 100%;
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+
+
+
+@media(max-width: 1320px){
+    html{
+        font-size: 80%;
+    }
+}
+
+@media(max-width: 1050px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width: 768px){
+    html{
+        font-size: 70%;
+    }
+    .container{
+        background: url(starter-code/assets/home/background-home-tablet.jpg);
+        background-size: cover;
+    }
+    nav{
+        margin: 0;
+        padding: 1rem;
+    }
+    nav ul{
+        width: 80%;
+        border-bottom-left-radius: 2rem;
+    }
+    .middle{
+        display: none;
+    }
+    header{
+        text-align: center;
+        display: block;
+        /* width: 100%; */
+    }
+    .header-right{
+        width: 100%;
+        display: grid;
+        place-items: center;
+        margin-top: 10rem;
+    }
+    .header-left{
+        width: 100%;
+    }
+    .container2{
+        background: url(starter-code/assets/destination/background-destination-tablet.jpg);
+        background-size: cover;
+    }
+    .destination-main{
+        width: 100%;
+        display: block;
+    }
+    .destination-left{
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
+    .destination-right{
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .slider-nav{
+        width: 100%;
+    }
+    .desc-slide-box{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .crew-main{
+        flex-direction: column;
+        margin-top: 5rem;
+    }
+    .crew-left{
+        width: 100%;
+        text-align: center;
+    }
+    .crew-slide-box{
+        margin: 0 auto;
+    }
+    .crew-decs p{
+        width: 100%;
+    }
+    .crew-right{
+        width: 100%;
+    }
+    .crew-image-box{
+        margin: 5rem auto;
+    }
+    .crew-buttons{
+        justify-content: center;
+    }
+    
+    .technology-main{
+        flex-direction: column-reverse;
+    }
+    .technology-right{
+        width: 100%;
+    }
+    .technology-image-box{
+        margin: 1rem auto;
+        width: 50rem;
+    }
+    .technology-image-slider1{
+        width: 50rem;
+        height: 30rem;
+        overflow: hidden;
+        background: url(starter-code/assets/technology/image-launch-vehicle-landscape.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .technology-image-slider2{
+        width: 50rem;
+        height: 30rem;
+        overflow: hidden;
+        background: url(starter-code/assets/technology/image-spaceport-landscape.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .technology-image-slider3{
+        width: 50rem;
+        height: 30rem;
+        overflow: hidden;
+        background: url(starter-code/assets/technology/image-space-capsule-landscape.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .technology-left{
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+    }
+    .technology-buttons{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .technology-slide-box{
+        margin: 0 auto;
+    }
+}
+@media(max-width: 650px){
+    .technology-image-box{
+        margin: 1rem auto;
+        width: 40rem;
+    }
+    .technology-image-slider1{
+        width: 40rem;
+        height: 30rem;
+        overflow: hidden;
+        background: url(starter-code/assets/technology/image-launch-vehicle-landscape.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .technology-image-slider2{
+        width: 40rem;
+        height: 30rem;
+        overflow: hidden;
+        background: url(starter-code/assets/technology/image-spaceport-landscape.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .technology-image-slider3{
+        width: 40rem;
+        height: 30rem;
+        overflow: hidden;
+        background: url(starter-code/assets/technology/image-space-capsule-landscape.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+@media(max-width: 500px){
+    html{
+        font-size: 45%;
+    }
+}
+@media(max-width: 400px){
+    html{
+        font-size: 55%;
+    }
+    .container{
+        background: url(starter-code/assets/home/background-home-mobile.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .container2{
+        background: url(starter-code/assets/destination/background-destination-mobile.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    header{
+        margin-top: 5rem;
+    }
+    .header-right{
+        margin-top: 0;
+    }
+    nav ul{
+        display: block;
+        position: absolute;
+        right: 0%;
+        top: 0;
+        width: 0%;
+        height: 100vh;
+        border-radius: 0;
+        transition: 0.5s;
+        overflow: hidden;
+        z-index: 5;
+    }
+    nav ul li{
+        margin: 5rem 0;
+    }
+    nav ul li a{
+        font-size: 300%;
+    }
+    .bar{
+        display: block;
+        padding: 1rem;
+    }
+    .close{
+        display: block;
+        padding: 1rem;
+    }
+    .crew-main{
+        flex-direction: column-reverse;
+        margin-top: 5rem;
+    }
+    .crew-left{
+        flex-direction: column-reverse;
+    }
+    .crew-buttons{
+        margin: 2rem 0;
+    }
+    .crew-image-box{
+        margin: 0 auto;
+    }
+    #technology{
+        width: 100%;
+    }
+}
+@media(max-width: 350px){
+    html{
+        font-size: 45%;
+    }
+}
